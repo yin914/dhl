@@ -168,7 +168,7 @@ function TrackPageContent() {
                   className="bg-gray-900 hover:bg-black text-[#FFCC00] text-xs font-bold px-3.5 py-2 rounded-xl shadow-sm flex items-center space-x-1.5 transition-all"
                 >
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  <span>Staff Sign In</span>
+                  {/*<span>Staff Sign In</span> */}
                 </button>
               </div>
             </div>
@@ -198,7 +198,7 @@ function TrackPageContent() {
 
               {/* Sample 1-Click Code Pills */}
               <div className="mt-3.5 pt-3 border-t border-gray-100 flex flex-wrap items-center gap-1.5 text-xs">
-                <span className="text-gray-500 font-bold mr-1">Quick Demo Waybills:</span>
+             {/*   <span className="text-gray-500 font-bold mr-1">Quick Demo Waybills:</span>
                 {shipments.map((s) => (
                   <button
                     key={s.id}
@@ -216,7 +216,7 @@ function TrackPageContent() {
                   >
                     {s.trackingId} <span className="font-sans font-normal text-[10px]">({s.status})</span>
                   </button>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
