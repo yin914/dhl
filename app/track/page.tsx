@@ -40,7 +40,7 @@ function TrackPageContent() {
   const router = useRouter();
   const { shipments, trackedShipmentId, setTrackedShipmentId, isSimulating, toggleCopilot, openCopilotWithPrompt } = useLogistics();
 
-  const queryCode = searchParams.get('id') || searchParams.get('code') || searchParams.get('trackingId') || trackedShipmentId || 'DHLDHLFASTLINK-8942-01';
+  const queryCode = searchParams.get('id') || searchParams.get('code') || searchParams.get('trackingId') || trackedShipmentId || 'DHLFASTLINK-8942-01';
   const effectiveCode = queryCode.trim().toUpperCase();
 
   const [inputCode, setInputCode] = useState(effectiveCode);
