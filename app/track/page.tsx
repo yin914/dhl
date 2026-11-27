@@ -40,7 +40,7 @@ function TrackPageContent() {
   const router = useRouter();
   const { shipments, trackedShipmentId, setTrackedShipmentId, isSimulating, toggleCopilot, openCopilotWithPrompt } = useLogistics();
 
-  const queryCode = searchParams.get('id') || searchParams.get('code') || searchParams.get('trackingId') || trackedShipmentId || 'FastLink-8942-01';
+  const queryCode = searchParams.get('id') || searchParams.get('code') || searchParams.get('trackingId') || trackedShipmentId || 'DHLDHLFASTLINK-8942-01';
   const effectiveCode = queryCode.trim().toUpperCase();
 
   const [inputCode, setInputCode] = useState(effectiveCode);
@@ -157,7 +157,7 @@ function TrackPageContent() {
               <div className="flex items-center space-x-2">
                 <button
                   type="button"
-                  onClick={() => openCopilotWithPrompt(`Where is my shipment ${inputCode || 'FastLink-8942-01'}?`)}
+                  onClick={() => openCopilotWithPrompt(`Where is my shipment ${inputCode || 'DHLFASTLINK-8942-01'}?`)}
                   className="bg-[#D40511] hover:bg-red-700 text-white text-xs font-black px-3.5 py-2 rounded-xl shadow-sm flex items-center space-x-1.5 transition-all"
                 >
                   <Mic className="w-4 h-4 text-[#FFCC00] animate-pulse" />
@@ -182,7 +182,7 @@ function TrackPageContent() {
                     type="text"
                     value={inputCode}
                     onChange={(e) => setInputCode(e.target.value)}
-                    placeholder="Enter FastLink Tracking Code (e.g. FastLink-8942-01)"
+                    placeholder="Enter FastLink Tracking Code (e.g. DHLFASTLINK-8942-01)"
                     className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-gray-300 rounded-xl text-sm font-mono font-bold text-gray-900 focus:outline-none focus:border-[#D40511] focus:bg-white transition-all uppercase"
                     required
                   />
@@ -239,10 +239,10 @@ function TrackPageContent() {
               </p>
               <div className="mt-6 flex justify-center">
                 <button
-                  onClick={() => handleSelectSample('FastLink-8942-01')}
+                  onClick={() => handleSelectSample('DHLFASTLINK-8942-01')}
                   className="bg-[#D40511] hover:bg-red-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow"
                 >
-                  Load Sample Shipment (FastLink-8942-01)
+                  Load Sample Shipment (DHLFASTLINK-8942-01)
                 </button>
               </div>
             </div>
