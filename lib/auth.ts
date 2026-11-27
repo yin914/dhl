@@ -12,9 +12,9 @@ const passwords = new ScryptPasswordHasher();
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
-      name: 'FastLink Credentials',
+      name: 'DHLFastLink Credentials',
       credentials: {
-        email: { label: 'Email', type: 'email', placeholder: 'dispatcher@fastlink.com' },
+        email: { label: 'Email', type: 'email', placeholder: 'dispatcher@dhlfastlink.com' },
         password: { label: 'Password', type: 'password' },
         role: { label: 'Role', type: 'text' },
       },

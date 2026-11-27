@@ -11,6 +11,7 @@
     "postinstall": "prisma generate",
     "db:generate": "prisma generate",
     "db:seed": "prisma db seed",
+    "db:seed:auth": "bun run prisma/seed-auth.ts",
     "db:migrate:turso": "bun run prisma/migrate-to-turso.ts"
   },
   "prisma": {

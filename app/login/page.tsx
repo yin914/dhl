@@ -40,7 +40,7 @@ function LoginPageContent() {
   >("superadmin");
 
   // Login form state
-  const [emailOrStaffId, setEmailOrStaffId] = useState("superadmin@fastlink.com");
+  const [emailOrStaffId, setEmailOrStaffId] = useState("superadmin@dhlfastlink.com");
   const [password, setPassword] = useState("password123");
   const [terminalHub, setTerminalHub] = useState("London Central Gateway");
   const [rememberMe, setRememberMe] = useState(true);
@@ -53,7 +53,7 @@ function LoginPageContent() {
   const [regHub, setRegHub] = useState(
     warehouses[0]?.name || "London Central Gateway",
   );
-  const [regVehicleId, setRegVehicleId] = useState("FastLink-EV-402");
+  const [regVehicleId, setRegVehicleId] = useState("DHLFastLink-EV-402");
   const [regPassword, setRegPassword] = useState("");
   const [regConfirmPassword, setRegConfirmPassword] = useState("");
   const [regAgreed, setRegAgreed] = useState(true);
@@ -76,17 +76,17 @@ function LoginPageContent() {
     setShowAuthLoader(true);
     setFeedback(null);
 
-    let defaultEmail = "superadmin@fastlink.com";
-    let defaultStaffId = "FastLink-DIR-001";
+    let defaultEmail = "superadmin@dhlfastlink.com";
+    let defaultStaffId = "DHLFastLink-DIR-001";
     let defaultName = "Alex Rodriguez";
 
     if (targetRole === "admin") {
-      defaultEmail = "admin@fastlink.com";
-      defaultStaffId = "FastLink-MGR-442";
+      defaultEmail = "admin@dhlfastlink.com";
+      defaultStaffId = "DHLFastLink-MGR-442";
       defaultName = "Sarah Jenkins";
     } else if (targetRole === "driver") {
-      defaultEmail = "driver@fastlink.com";
-      defaultStaffId = "FastLink-DRV-101";
+      defaultEmail = "driver@dhlfastlink.com";
+      defaultStaffId = "DHLFastLink-DRV-101";
       defaultName = "Marcus Vance";
     }
 
@@ -113,7 +113,7 @@ function LoginPageContent() {
         staffId: defaultStaffId,
         name: defaultName,
         hub: terminalHub,
-        vehicleId: targetRole === "driver" ? "FastLink-EV-402" : undefined,
+        vehicleId: targetRole === "driver" ? "DHLFastLink-EV-402" : undefined,
       });
 
       setFeedback({
@@ -160,7 +160,7 @@ function LoginPageContent() {
         email: emailOrStaffId.includes("@") ? emailOrStaffId : undefined,
         staffId: !emailOrStaffId.includes("@") ? emailOrStaffId : undefined,
         hub: terminalHub,
-        vehicleId: selectedRole === "driver" ? "FastLink-EV-402" : undefined,
+        vehicleId: selectedRole === "driver" ? "DHLFastLink-EV-402" : undefined,
       });
 
       setFeedback({
@@ -277,7 +277,7 @@ function LoginPageContent() {
                   Marcus Vance
                 </div>
                 <div className="text-[11px] text-gray-500 font-mono">
-                  FastLink-EV-402 (Driver View)
+                  DHLFastLink-EV-402 (Driver View)
                 </div>
               </button>
 
@@ -397,10 +397,10 @@ function LoginPageContent() {
                           setSelectedRole(item.id as any);
                           if (authMode === "login") {
                             if (item.id === "driver")
-                              setEmailOrStaffId("driver@fastlink.com");
+                              setEmailOrStaffId("driver@dhlfastlink.com");
                             else if (item.id === "admin")
-                              setEmailOrStaffId("admin@fastlink.com");
-                            else setEmailOrStaffId("superadmin@fastlink.com");
+                              setEmailOrStaffId("admin@dhlfastlink.com");
+                            else setEmailOrStaffId("superadmin@dhlfastlink.com");
                           }
                         }}
                         className={`p-3 rounded-xl text-left border-2 transition-all ${
@@ -459,7 +459,7 @@ function LoginPageContent() {
                         type="text"
                         value={emailOrStaffId}
                         onChange={(e) => setEmailOrStaffId(e.target.value)}
-                        placeholder="e.g. driver@fastlink.com or FastLink-EMP-101"
+                        placeholder="e.g. driver@dhlfastlink.com or DHLFastLink-EMP-101"
                         required
                         className="w-full pl-10 pr-3 py-2.5 bg-slate-50 border border-gray-300 rounded-xl text-xs font-semibold text-gray-900 focus:outline-none focus:border-[#D40511] focus:bg-white"
                       />
@@ -592,7 +592,7 @@ function LoginPageContent() {
                         required
                         value={regEmail}
                         onChange={(e) => setRegEmail(e.target.value)}
-                        placeholder="e.g. dmiller@fastlink.com"
+                        placeholder="e.g. dmiller@dhlfastlink.com"
                         className="w-full bg-slate-50 border border-gray-300 rounded-xl px-3 py-2 text-xs font-semibold"
                       />
                     </div>
@@ -624,7 +624,7 @@ function LoginPageContent() {
                         type="text"
                         value={regVehicleId}
                         onChange={(e) => setRegVehicleId(e.target.value)}
-                        placeholder="e.g. FastLink-EV-402"
+                        placeholder="e.g. DHLFastLink-EV-402"
                         className="w-full bg-slate-50 border border-gray-300 rounded-xl px-3 py-2 text-xs font-mono font-bold"
                       />
                     </div>

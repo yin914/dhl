@@ -287,10 +287,10 @@ async function main() {
     {
       id: "usr-superadmin",
       name: "Alex Rodriguez",
-      email: "superadmin@fastlink.com",
+      email: "superadmin@dhlfastlink.com",
       passwordHash: await passwordHasher.hash(seedPassword),
       role: "superadmin" as const,
-      staffId: "FastLink-DIR-001",
+      staffId: "DHLFastLink-DIR-001",
       hub: "Global Operations Headquarters",
       department: "Executive Logistics Command",
       phone: "+44 20 7946 0991",
@@ -300,10 +300,10 @@ async function main() {
     {
       id: "usr-admin",
       name: "Sarah Jenkins",
-      email: "admin@fastlink.com",
+      email: "admin@dhlfastlink.com",
       passwordHash: await passwordHasher.hash(seedPassword),
       role: "admin" as const,
-      staffId: "FastLink-MGR-442",
+      staffId: "DHLFastLink-MGR-442",
       hub: "London Central Gateway",
       department: "Dispatch & Fleet Logistics",
       phone: "+44 20 7946 0834",
@@ -313,10 +313,10 @@ async function main() {
     {
       id: "usr-customer",
       name: "Customer User",
-      email: "customer@fastlink.com",
+      email: "customer@dhlfastlink.com",
       passwordHash: await passwordHasher.hash(seedPassword),
       role: "customer" as const,
-      staffId: "FastLink-CUST-001",
+      staffId: "DHLFastLink-CUST-001",
       hub: "London Central Gateway",
       department: "Retail Logistics",
       phone: "+44 20 7946 0000",
@@ -326,12 +326,12 @@ async function main() {
     {
       id: "usr-driver-default",
       name: "Marcus Vance",
-      email: "driver@fastlink.com",
+      email: "driver@dhlfastlink.com",
       passwordHash: await passwordHasher.hash(seedPassword),
       role: "driver" as const,
-      staffId: "FastLink-DRV-101",
+      staffId: "DHLFastLink-DRV-101",
       hub: "London Central Gateway",
-      vehicleId: "FastLink-V-901",
+      vehicleId: "DHLFastLink-V-901",
       department: "Express Last-Mile Courier",
       phone: "+1 (555) 234-5678",
       avatarUrl: "https://picsum.photos/seed/driver1/120/120",
@@ -346,7 +346,7 @@ async function main() {
   // Seed all drivers from INITIAL_DRIVERS
   for (const driver of INITIAL_DRIVERS) {
     const emailName = driver.name.toLowerCase().replace(/\s+/g, ".");
-    const staffId = `FastLink-DRV-${driver.id.replace("drv-", "")}`;
+    const staffId = `DHLFastLink-DRV-${driver.id.replace("drv-", "")}`;
     const passwordHash = await passwordHasher.hash(seedPassword);
 
     await userRepository.upsertUser({
@@ -354,8 +354,8 @@ async function main() {
       name: driver.name,
       email:
         driver.id === "drv-101"
-          ? "driver@fastlink.com"
-          : `${emailName}@fastlink.com`,
+          ? "driver@dhlfastlink.com"
+          : `${emailName}@dhlfastlink.com`,
       passwordHash,
       role: "driver",
       staffId,
